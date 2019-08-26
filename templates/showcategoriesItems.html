@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='css/customer.css')}}"/>
+    <title>Catalog</title>
+</head>
+
+<body>
+  <div class ='pane'>
+
+  <a href="{{url_for('addItem'), category_id=category_id}}"><h3>Add a New Item</h3> </a>
+
+<div class = 'name'>
+  <h1> Items</h1>
+  {%for item in items%}
+  <a href = '#'<p>{{item.name}}</p></a>
+    {% endfor %}
+</div>
+</div>
+</body>
+</html>
